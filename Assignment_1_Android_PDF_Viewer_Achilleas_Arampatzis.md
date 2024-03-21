@@ -4,7 +4,7 @@
 We will first use apktool to .xapk. In the manifest.json we see that the apk is split into few apks but the main is com.tragisoap... . Already we can see that there are some "strange" permissions. With the help of jadx-gui we decompile the base .apk "com.tragisoap.fileandpdfmanager.apk".
 
 In the AndroidManifest.xml we can see some suspicious permissions:
-![[Pasted image 20240319155728.png]]
+![[20240319155728.png]]
 
 So the app can potentially install malicious packages.
 Assuming that the app will connect to a server to install the malicious packages we search for "http". Indeed we find 2 strings:
